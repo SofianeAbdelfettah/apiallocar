@@ -1,0 +1,29 @@
+{
+  "name": "apiallocar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "base64-img": "^1.0.3",
+    "body-parser": "^1.17.2",
+    "compression": "^1.6.2",
+    "express": "^4.15.3",
+    "mysql2": "^1.3.3",
+    "sequelize": "^4.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SofianeAbdelfettah/apiallocar.git"
+  },
+  "author": "Abdelfettah Sofiane",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SofianeAbdelfettah/apiallocar/issues"
+  },
+  "homepage": "https://github.com/SofianeAbdelfettah/apiallocar#readme"
+}

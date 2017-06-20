@@ -12,15 +12,13 @@ module.exports = {
       });
   },
   add(req, res) {
-
-
     User.findAll({
       where: {
         name: req.body.name
       }
     }).then(function(users) {
       if (users.length === 0) {
-        User.create(req.body.name)
+        User.create({name:req.body.name})
           .then(function(newUser) {
             return res.status(200).json(newUser);
           })
@@ -32,9 +30,6 @@ module.exports = {
     }).catch(function(error) {
       return res.json(error);
     });
-
-
-
 
   },
   one(req, res) {

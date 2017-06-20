@@ -1,22 +1,21 @@
-const compression = require('compression');
-const bodyParser = require('body-parser')
-const base64Img = require('base64-img');
 const express = require('express');
-const app = require('express')();
+const app = express();
+var bodyParser = require('body-parser');
+const compression = require('compression');
+const base64Img = require('base64-img');
 users = require('./routes/user.js');
 
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 
   app.use(function(req, res, next) {
       res.header("Access-Control-Allow-Origin", "*");
       res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-
       res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
       next();
   });
 
-  app.use(bodyParser.urlencoded({
-      extended: true
-  }));
 
 app.use(express.static('public'));
 app.use(compression());
